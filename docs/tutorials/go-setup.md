@@ -6,7 +6,7 @@
 
 ## What You Need to start
 
-1. [**Git**](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git) intalled
+1. [**Git**](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git) installed
 2. [**Visual Studio Code**](https://code.visualstudio.com/)
 3. A **[GitHub](https://github.com/)** account
 4. [**Docker**](https://www.docker.com/products/docker-desktop/) installed
@@ -24,22 +24,17 @@ cd go-project
 ```bash
 git init
 ```
-- Make it into a GitHub repository
-```bash
-gh repo create go-project --public --source=. --remote=origin 
-```
 
-- Create a README.md and push it to your remote repository
+- Create a README.md
 ```bash
 echo "# go-project" >> README.md
 git add .
 git commmit -m "Initial commit"
-git push --set-upstream origin main
 ```
 
 ## Setting up your dev container
 
-1. Open up your project in VS Code.
+1. Open up your project in VS Code
 2. Install the *Dev Containers* extension
 3. Create a `.devcontainer ` directory in the root of your project with the file `devcontainer.json` inside
 4. paste the following code into your new file:
@@ -53,13 +48,17 @@ git push --set-upstream origin main
       "settings": {},
       "extensions": ["golang.go"]
     }
-  }
-} 
+  },
+  "postCreateCommand": "go version"
+}
 ```
+
+!!! Note
+    They want us to automatically display the Go version
 
 Reopen the project in the container by pressing `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac), typing `"Dev Containers: Reopen in Container"`, and selecting the option. This may take a few minutes while the image is downloaded and the requirements are installed.
 
-Once your dev container setup completes, close the current terminal tab (trash can), open a new terminal pane within VSCode, run `go version`!
+Once your dev container setup completes, close the current terminal tab (trash can) and open a new terminal pane within VSCode!
 
 ## Hello 423 program
 
@@ -103,4 +102,4 @@ In your directory, you should see a `main` file appear. This file contains the b
 ./main 
 ```
 
-This command is similar to the gcc command that we learned in 211 but the difference is that The build command automates the entire build process (compiling, linking, and more), while gcc specifically compiles and links source code into executables or libraries.
+This command is similar to the gcc command that we learned in 211 but the difference is that the build command automates the entire build process (compiling, linking, and more), while gcc specifically compiles and links source code into executables or libraries.
