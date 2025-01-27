@@ -3,7 +3,6 @@
 * Primary author: [Simon Felt](https://github.com/simofel)
 * Reviewer: [Joseph Clampett](https://github.com/josephclampett-education)
 
-
 ## What You Need to start
 
 1. [**Git**](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git) installed
