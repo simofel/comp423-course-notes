@@ -3,6 +3,7 @@
 * Primary author: [Simon Felt](https://github.com/simofel)
 * Reviewer: [Joseph Clampett](https://github.com/josephclampett-education)
 
+Dev containers are important for making sure dev environments remain the same. In this tutorial I will show you how to set up a dev container using Docker and run your first Go program with it.
 
 ## What You Need to start
 
@@ -54,7 +55,7 @@ git commmit -m "Initial commit"
 ```
 
 !!! Note
-    They want us to automatically display the Go version
+    The devcontainer.json file is a file that is used by docker to specify the image and allows for everyone who works on the project to have the same environment.
 
 Reopen the project in the container by pressing `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac), typing `"Dev Containers: Reopen in Container"`, and selecting the option. This may take a few minutes while the image is downloaded and the requirements are installed.
 
